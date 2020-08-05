@@ -11,9 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:gravity="center"
         android:hint="Title"
-        android:inputType="text"
+        android:inputType="textMultiLine|text"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="-16dp" />
 
@@ -22,8 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="451dp"
         android:hint="Description"
-        android:inputType="text"
-        android:gravity="center"
+        android:inputType="textMultiLine|text"
         app:layout_constraintTop_toBottomOf="@+id/author"
         tools:layout_editor_absoluteX="0dp" />
 
@@ -45,7 +43,6 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="Author"
-        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title" />
