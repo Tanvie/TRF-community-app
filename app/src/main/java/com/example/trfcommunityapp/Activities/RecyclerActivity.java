@@ -93,36 +93,5 @@ public class RecyclerActivity extends AppCompatActivity {
 
             }
         });
-//        notebookRef.addSnapshotListener(this, new EventListener<QuerySnapshot>() {
-//            @Override
-//            public void onEvent(QuerySnapshot queryDocumentSnapshots, FirebaseFirestoreException e) {
-//                if (e != null) {
-//                    return;
-//                }
-//                String data = "";
-//                for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
-//                    blogs blog = documentSnapshot.toObject(blogs.class);
-//                    blog.setDocumentId(documentSnapshot.getId());
-//                    String documentId = blog.getDocumentId();
-//                    String title = blog.getTitle();
-//                    String author = blog.getAuthor();
-//                    String description = blog.getDescription();
-//                    titles.add(title);
-//                    authors.add(author);
-//                    Log.i(title,author);
-//
-////                    data += "ID: " + documentId
-////                            + "\nTitle: " + title + "\nDescription: " + description + "\n\n";
-//                }
-//
-//
-//
-//            }
-//        });
-
-
-
     }
-
-
 }

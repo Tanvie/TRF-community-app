@@ -44,26 +44,40 @@ public class AddPost extends AppCompatActivity {
         String title = ed_title.getText().toString();
         String description = ed_description.getText().toString();
         String author = ed_author.getText().toString();
-        Map<String, Object> note = new HashMap<>();
-        note.put(KEY_TITLE, title);
-        note.put(KEY_DESCRIPTION, description);
-        note.put(KEY_AUTHOR, author);
-        db.collection("Blogs").document(title).set(note)
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-                        Toast.makeText(AddPost.this, "Blog saved", Toast.LENGTH_SHORT).show();
-                        updateUI();
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(AddPost.this, "Error in uploading the blog!", Toast.LENGTH_SHORT).show();
-                        //Log.d( TAG,e.toString());
-                    }
-                });
+
+        if (title.isEmpty() || description.isEmpty() || author.isEmpty()) {
+            showMessage("Please Verify all fields");
+            upload.setVisibility(View.VISIBLE);
+        }
+        else
+            {
+            Map<String, Object> note = new HashMap<>();
+            note.put(KEY_TITLE, title);
+            note.put(KEY_DESCRIPTION, description);
+            note.put(KEY_AUTHOR, author);
+            db.collection("Blogs").document(title).set(note)
+                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            Toast.makeText(AddPost.this, "Blog saved", Toast.LENGTH_SHORT).show();
+                            updateUI();
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(AddPost.this, "Error in uploading the blog!", Toast.LENGTH_SHORT).show();
+                            //Log.d( TAG,e.toString());
+                        }
+                    });
+        }
     }
+    private void showMessage (String message){
+
+        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
+
+    }
+
 
     private void updateUI() {
         Intent homeActivity = new Intent(AddPost.this, RecyclerActivity.class);
