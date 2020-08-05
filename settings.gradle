@@ -1,0 +1,2 @@
+rootProject.name='TRF Community App'
+include ':app'

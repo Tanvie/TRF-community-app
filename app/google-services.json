@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "475947957718",
+    "firebase_url": "https://trf-community-app-baebe.firebaseio.com",
+    "project_id": "trf-community-app-baebe",
+    "storage_bucket": "trf-community-app-baebe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:475947957718:android:478a4708c539dba2463877",
+        "android_client_info": {
+          "package_name": "com.example.trfcommunityapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "475947957718-1fbt85p4d15jshqutgjvumhov4bctre6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLd7bxyu9n3rhopBHM8omhCqagEugRUsc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "475947957718-1fbt85p4d15jshqutgjvumhov4bctre6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
