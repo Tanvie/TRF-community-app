@@ -15,19 +15,18 @@ public class RecyclerActivity extends AppCompatActivity {
 
 
     Button addpost_btn;
-//    RecyclerView recyclerView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler);
 
         addpost_btn = (Button)findViewById(R.id.btn_addpost);
-//        recyclerView = findViewById(R.id.recyclerView);
+
 
         addpost_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent addPost = new Intent(getApplicationContext(),AddPost.class);
+                Intent addPost = new Intent(RecyclerActivity.this, AddPost.class);
                 startActivity(addPost);
                 finish();
 

@@ -6,11 +6,48 @@
     android:layout_height="match_parent"
     tools:context=".Activities.AddPost">
 
-    <TextView
-        android:id="@+id/textView5"
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:hint="Title"
+        android:inputType="text"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-16dp" />
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="451dp"
+        android:hint="Description"
+        android:inputType="text"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/author"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/upload_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add post here"
-        tools:layout_editor_absoluteX="157dp"
-        tools:layout_editor_absoluteY="267dp" />
+        android:text="Upload"
+        android:onClick="upload"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description" />
+
+    <EditText
+        android:id="@+id/author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Author"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
