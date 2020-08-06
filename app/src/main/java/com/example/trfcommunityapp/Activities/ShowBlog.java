@@ -55,11 +55,11 @@ public class ShowBlog extends AppCompatActivity {
                 display_title =(String) display_blog.getTitle();
                 display_author =(String)display_blog.getAuthor();
                 display_des =(String) display_blog.getDescription();
-                Log.d(display_title,display_des);
+                //Log.d(display_title,display_des);
                 title.setText(display_title);
                 description.setText(display_des);
                 description.setMovementMethod(new ScrollingMovementMethod());
-                author.setText(display_author);
+                author.setText((String)"Author : " + display_author);
 
             }
 

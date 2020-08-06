@@ -87,7 +87,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/register"
         app:layout_constraintEnd_toEndOf="@+id/register"
-        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="@+id/register"
         app:layout_constraintTop_toTopOf="@+id/register"
         app:layout_constraintVertical_bias="0.0" />
