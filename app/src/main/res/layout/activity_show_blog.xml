@@ -21,6 +21,7 @@
             android:textSize="30sp"
             android:inputType="textMultiLine"
             android:textStyle="bold"
+            android:gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -44,7 +45,7 @@
 
                 <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="30dp">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/sb_description"

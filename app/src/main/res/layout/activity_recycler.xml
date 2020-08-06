@@ -13,23 +13,18 @@
         android:id="@+id/btn_addpost"
         android:layout_width="59dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="143dp"
-        android:layout_marginLeft="143dp"
-        android:layout_marginTop="269dp"
-        android:layout_marginEnd="180dp"
-        android:layout_marginRight="180dp"
-        android:layout_marginBottom="414dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
         android:background="#fff200"
-
         android:foreground="@drawable/ic_create_black_24dp" />
-
     <ListView
         android:id="@+id/listview"
 
         android:background="#fff200"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         >
+
 
     </ListView>
 
