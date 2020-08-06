@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.trfcommunityapp.R;
@@ -23,8 +22,6 @@ public class ShowBlog extends AppCompatActivity {
     String getId,display_title,display_des,display_author;
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
-//    CollectionReference blogRef = db.collection("Blogs");
-//    DocumentReference noteRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +37,7 @@ public class ShowBlog extends AppCompatActivity {
         extras = getIntent().getExtras();
         if (extras != null) {
              getId = extras.getString("title");
-            // and get whatever type user account id is
+            // and get whatever type blog title is
         }
 
         //noteRef = db.document("Blogs/" +getId);

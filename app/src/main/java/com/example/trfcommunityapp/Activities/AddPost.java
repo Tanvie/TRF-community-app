@@ -29,6 +29,7 @@ public class AddPost extends AppCompatActivity {
     EditText ed_title,ed_description,ed_author;
     Button upload;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

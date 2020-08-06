@@ -9,12 +9,6 @@
     tools:context=".Activities.LoginActivity">
 
 
-    <!--    <android.support.constraint.Guideline-->
-<!--        android:id="@+id/guideline3"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="horizontal"-->
-<!--        app:layout_constraintGuide_percent="0.5" />-->
 
     <ImageView
         android:id="@+id/imageView"
@@ -102,6 +96,7 @@
         app:layout_constraintEnd_toStartOf="@+id/button"
         app:layout_constraintHorizontal_bias="0.925"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_password" />
+        app:layout_constraintTop_toBottomOf="@+id/login_password"
+        tools:ignore="UnknownId" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

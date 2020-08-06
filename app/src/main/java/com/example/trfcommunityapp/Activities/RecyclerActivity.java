@@ -14,7 +14,6 @@ import android.widget.ListView;
 
 import com.example.trfcommunityapp.R;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -31,14 +30,14 @@ public class RecyclerActivity extends AppCompatActivity {
 
     Button addpost_btn;
     ArrayList<String> titles = new ArrayList<>();
-    ArrayList<String> authors = new ArrayList<>();
+    //ArrayList<String> authors = new ArrayList<>();
     ListView listView;
     ArrayAdapter<String> arrayAdapter;
 
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
-    CollectionReference notebookRef = db.collection("Blogs");
-   // DocumentReference noteRef = db.document("Blogs/test2");
+    CollectionReference blogRef = db.collection("Blogs");  //path to the collection on firebase
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,18 +77,19 @@ public class RecyclerActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
             titles.clear();
-            authors.clear();
+            //authors.clear();
 
-        notebookRef.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+        blogRef.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                 for (DocumentSnapshot blog : queryDocumentSnapshots){
                     blogs b = blog.toObject(blogs.class);
                     titles.add(b.getTitle());
-                    authors.add(b.getAuthor());
+                    //authors.add(b.getAuthor());
                 }
                 arrayAdapter.notifyDataSetChanged();
-
+                //Notifies the attached observers that the underlying data has been changed and
+                // any View reflecting the data set should refresh itself.
 
             }
         });
